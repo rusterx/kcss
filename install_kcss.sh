@@ -17,7 +17,7 @@ function install_dep(){
 
 
 
-echo -n "\Please input the remote kcptun port: "
+echo -n "Please input the remote kcptun port: "
 read remote_kcptun_port
 
 echo -n "Please input kcptun password: "
