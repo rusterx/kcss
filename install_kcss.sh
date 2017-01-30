@@ -3,7 +3,7 @@
 # install dependencies
 function install_dep(){
 	yum update -y
-	yum install git vim -y
+	yum install git -y
 
 	# install history and lanuage
 	bash <(curl -s http://git.oschina.net/x242025/Shell/raw/master/CentOS/set_locale.sh)
@@ -12,7 +12,6 @@ function install_dep(){
 	#  install python environment of shaowsocks
 	yum install m2crypto python-setuptools -y
 	easy_install pip
-	pip install cymysql
 }
 
 
@@ -32,7 +31,7 @@ read local_ss_port
 echo -n "Please input local shadowsocks password: "
 read local_ss_password
 
-echo "Please any key to continue or CTRL + C to pause..."
+echo -n "Please any key to continue or CTRL + C to pause..."
 read opt
 
 
@@ -65,8 +64,9 @@ EOF
 
 script_path=~/kcss
 
-$script_path/kcss.sh start
-echo "$script_path/kcss.sh start" >> /etc/rc.local
+sudo chmod a+x -R $script_path
+sudo $script_path/kcss.sh start
+sudo echo "$script_path/kcss.sh start" >> /etc/rc.local
 
 
 
