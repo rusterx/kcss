@@ -17,27 +17,28 @@ function install_dep(){
 
 
 
-echo -ne "\e[0;32mPlease input the remote kcptun port: \e[47m"
+echo -n "\Please input the remote kcptun port: "
 read remote_kcptun_port
 
-echo -ne "\e[0;32mPlease input kcptun password: \e[47m"
+echo -n "Please input kcptun password: "
 read kcptun_password
 
-echo -ne "\e[0;32mPlease input kcptun mode: \e[47m"
+echo -n "Please input kcptun mode: "
 read kcptun_mode
 
-echo -ne "\e[0;32mPlease input local shadowsocks port: \e[47m"
+echo -n "Please input local shadowsocks port: "
 read local_ss_port
 
-echo -ne "\e[0;32mPlease input local shadowsocks password: \e[47m"
+echo -n "Please input local shadowsocks password: "
 read local_ss_password
 
-read "Please any key to continue or CTRL + C to pause..."
+echo "Please any key to continue or CTRL + C to pause..."
+read opt
 
 
 install_dep
 pip install shadowsocks
-wget https://github.com/xingtingyang/kcss.git
+git clone https://github.com/xingtingyang/kcss.git
 cd kcss
 
 
