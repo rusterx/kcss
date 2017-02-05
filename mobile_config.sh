@@ -24,14 +24,14 @@ read_server_config
 
 ss_base4_config=`echo aes-256-cfb:${local_ss_password}@${server_ip}:local_ss_port|base64`
 ss_config="ss://${ss_base4_config}"
-wget "http://qr.liantu.com/api.php?text=${ss_config}" -O kcss-client/ss-qr.png
+wget "http://qr.liantu.com/api.php?text=${ss_config}" -O ${server_path}/ss-qr.png
 
 kcptun_config="-autoexpire 60 -key \"${kcptun_password}\" -mode \"fast2\""
-wget "http://qr.liantu.com/api.php?text=${kcptun_config}" -O kcss-client/kcptun-qr.png
+wget "http://qr.liantu.com/api.php?text=${kcptun_config}" -O ${server_path}/kcptun-qr.png
 
 clear
 echo "kcptun port is: ${remote_kcptun_port}"
-echo "http://${server_ip}:8000/kcss-client/ss-qr.png"
-echo "http://${server_ip}:8000/kcss-client/kcptun-qr.png"
+echo "http://${server_ip}:8000/kcss-server/ss-qr.png"
+echo "http://${server_ip}:8000/kcss-server/kcptun-qr.png"
 python -m SimpleHTTPServer
 
