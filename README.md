@@ -76,6 +76,7 @@ forward-socks5 / 127.0.0.1:1080 .
 ```
 echo 'alias set_proxy="export http_proxy=http://127.0.0.1:8118 && export https_proxy=http://127.0.0.1:8118"' >> ~/.bash_profile
 echo 'alias unset_proxy="unset http_proxy && unset https_proxy"' >> ~/.bash_profile
+source ~/.bash_profile
 ```
 
 
