@@ -30,11 +30,9 @@ function read_param(){
 
 install_dep && read_param
 pip install shadowsocks
-git clone https://github.com/xingtingyang/kcss.git
 
 pp=`dirname "$0"`
 server_script_path="${pp}/kcss-server"
-chmod -R 777 ${server_script_path}
 
 cat > ${server_script_path}/shadowsocks.json << EOF
 {
@@ -56,9 +54,9 @@ cat > ${server_script_path}/kcptun.json << EOF
 }
 EOF
 
-sudo chmod a+x -R ${server_script_path}
-sudo ${server_script_path}/kcss.sh start
-sudo echo "${server_script_path}/kcss.sh start" >> /etc/rc.local
+chmod -R 777 ${server_script_path}
+bash ${server_script_path}/kcss.sh start
+echo "${server_script_path}/kcss.sh start" >> /etc/rc.local
 
 
 
