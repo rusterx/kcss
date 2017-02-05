@@ -1,0 +1,4 @@
+<job id="start">
+	<script src="start_shadowsocks.js" language="JScript"></script>
+	<script src="start_kcptun.js" language="JScript"></script>
+</job>

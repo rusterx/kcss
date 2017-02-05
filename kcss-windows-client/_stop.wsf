@@ -1,0 +1,4 @@
+<job id="stop">
+	<script src="stop_shadowsocks.vbs" language="VBScript"></script>
+	<script src="stop_kcptun.vbs" language="VBScript"></script>
+</job>

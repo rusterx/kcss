@@ -1,0 +1,12 @@
+{
+"configs" : [
+],
+"strategy" : null,
+"index" : 0,
+"global" : false,
+"enabled" : true,
+"shareOverLan" : false,
+"isDefault" : false,
+"localPort" : 1080,
+"pacUrl" : "",
+"useOnlinePac" : false}

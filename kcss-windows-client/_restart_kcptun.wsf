@@ -1,0 +1,4 @@
+<job id="restart_kcptun">
+	<script src="stop_kcptun.vbs" language="VBScript"></script>
+	<script src="start_kcptun.js" language="JScript"></script>
+</job>
