@@ -74,8 +74,8 @@ forward-socks5 / 127.0.0.1:1080 .
 
 以后使用只要使用`set_proxy`命令即可，使用`unset_proxy`即可不用代理
 ```
-echo 'alias set_proxy="export http_proxy=http://127.0.0.1:8118 && export https_proxy=http://127.0.0.1:8118"' > ~/.bash_profile
-echo 'alias unset_proxy="unset http_proxy && unset https_proxy' > ~/.bash_profile
+echo 'alias set_proxy="export http_proxy=http://127.0.0.1:8118 && export https_proxy=http://127.0.0.1:8118"' >> ~/.bash_profile
+echo 'alias unset_proxy="unset http_proxy && unset https_proxy"' >> ~/.bash_profile
 ```
 
 
