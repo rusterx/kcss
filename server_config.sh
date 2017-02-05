@@ -31,7 +31,7 @@ function read_param(){
 install_dep && read_param
 pip install shadowsocks
 
-pp=`dirname "$0"`
+pp=`pwd`
 server_script_path="${pp}/kcss-server"
 
 cat > ${server_script_path}/shadowsocks.json << EOF

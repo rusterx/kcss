@@ -11,7 +11,7 @@ function read_server_config(){
 }
 
 
-pp=`dirname "$0"`
+pp=`pwd`
 server_path="${pp}/kcss-server"
 client_path="${pp}/kcss-client"
 
