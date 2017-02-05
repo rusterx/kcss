@@ -22,7 +22,7 @@ ss_json=`cat ${server_path}/shadowsocks.json`
 
 read_server_config
 
-ss_base4_config=`echo aes-256-cfb:${local_ss_password}@${server_ip}:local_ss_port|base64`
+ss_base4_config=`echo aes-256-cfb:${local_ss_password}@${server_ip}:${local_ss_port}|base64`
 ss_config="ss://${ss_base4_config}"
 wget "http://qr.liantu.com/api.php?text=${ss_config}" -O ${server_path}/ss-qr.png
 
