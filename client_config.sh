@@ -12,7 +12,7 @@ function read_server_config(){
 
 
 pp=`dirname "$0"`
-server_path=$pp
+server_path="${pp}/kcss-server"
 client_path="${pp}/kcss-client"
 
 \rm -r ${client_path}/*.json
