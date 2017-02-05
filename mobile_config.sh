@@ -13,7 +13,6 @@ function read_server_config(){
 
 pp=`pwd`
 server_path="${pp}/kcss-server"
-client_path="${pp}/kcss-client"
 
 jq_dirname="${pp}/jq";
 jq_path="${jq_dirname}/jq-linux64"
