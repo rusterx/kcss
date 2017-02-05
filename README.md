@@ -31,7 +31,9 @@ pip install shadowsocks
 
 - 在本地下载客户端配置文件
 ```bash
-wget http://server_ip:8000/kcss-client.tar.gz
+# http://www.cnblogs.com/3me-linux/p/4284931.html
+server_ip=`curl -s ident.me`
+wget http://${server_ip}:8000/kcss-client.tar.gz
 tar -xvf kcss-client.tar.gz
 bash kcss-client/kcss.sh start
 # bash kcss-client/single-shadowsocks.sh
