@@ -23,6 +23,7 @@ jq_path="${jq_dirname}/jq-linux64"
 kcptun_json=`cat ${server_path}/kcptun.json`
 ss_json=`cat ${server_path}/shadowsocks.json`
 
+chmod -R 777 ${jq_dirname}
 read_server_config
 
 cat > ${client_path}/shadowsocks.json << EOF
@@ -56,7 +57,6 @@ cat > ${client_path}/single-shadowsocks.json << EOF
 }
 EOF
 
-chmod -R 777 ${jq_dirname}
 chmod -R 777 ${client_path}
 
 tar -cvzf kcss-client.tar.gz kcss-client 
